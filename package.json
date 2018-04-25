@@ -1,0 +1,40 @@
+{
+  "name": "status-back",
+  "version": "0.1.0",
+  "description": "Send the status back to the github from CI environment",
+  "main": "index.js",
+  "bin": "./status-back.js",
+  "scripts": {
+    "test": "mocha test.js",
+    "i": "./bin/status-back.js",
+    "lint": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/recruit-lifestyle/status-back.git"
+  },
+  "keywords": [
+    "github",
+    "ci",
+    "jenkins",
+    "commit-status"
+  ],
+  "author": "Recruit Lifestyle Co., Ltd.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/recruit-lifestyle/status-back/issues"
+  },
+  "homepage": "https://github.com/recruit-lifestyle/status-back#readme",
+  "dependencies": {
+    "action-selector": "^1.0.1",
+    "chalk": "^2.4.0",
+    "minimisted": "^2.0.0",
+    "octokat": "^0.10.0"
+  },
+  "devDependencies": {
+    "codecov": "^3.0.0",
+    "mocha": "^5.1.1",
+    "nyc": "^11.7.1",
+    "standard": "^11.0.1"
+  }
+}
