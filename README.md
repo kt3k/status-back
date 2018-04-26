@@ -33,9 +33,9 @@ This installs `status-back` to your system.
                                 Optionally set by GITHUB_API env var.
 
   Example:
-    status-back -s --token 12345... --repo nodejs/node --context ci/build "build success!" "https://ci.server/build/12345"
+    status-back -s -t 12345... -r nodejs/node -c ci/build "build success!" https://ci.server/build/12345
 
-    status-back -f --token 12345... --repo nodejs/node --context ci/build "build failure!" "https://ci.server/build/12346"
+    status-back -f -t 12345... -r nodejs/node -c ci/build "build failure!" https://ci.server/build/12346 --github-api https://github.my-company/api/v3
 ```
 
 # License
