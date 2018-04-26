@@ -32,21 +32,22 @@ class CLI {
     -s, --success - - - - - - - Set the commit status success.
     -f, --failure - - - - - - - Set the commit status failure.
     -e, --error - - - - - - - - Set the commit status error.
-    -t, --token <token> - - - - Set the github token.
+    -t, --token <token> - - - - Set the github token. Required.
                                 Optionally set by GITHUB_TOKEN env var.
-    -r, --repo <repo> - - - - - Set the repo slug. e.g. nodejs/node.
+    -r, --repo <repo> - - - - - Set the repo slug. e.g. nodejs/node. Requird.
                                 Optionally set by GITHUB_REPO env var.
     --sha1 <sha1> - - - - - - - Set the sha1 of the commit. Default is the current sha1.
                                 Optionally set by STATUS_SHA1.
-    -c, --context <context> - - Set the context of the commit status. e.g. ci/build.
+                                If not specified, the sha1 of current dir is used.
+    -c, --context <context> - - Set the context of the commit status. e.g. ci/build. Required.
                                 Optionally set by STATUS_CONTEXT env var.
     --github-api <url>  - - - - Set the url of the github api. Set this when you use with github enterprise.
                                 Optionally set by GITHUB_API env var.
 
   Example:
-    ${pkg.name} -s --repo nodejs/node --context ci/build "build success!" "https://ci.server/build/12345"
+    ${pkg.name} -s --token 12345... --repo nodejs/node --context ci/build "build success!" "https://ci.server/build/12345"
 
-    ${pkg.name} -f --repo nodejs/node --context ci/build "build failure!" "https://ci.server/build/12346"
+    ${pkg.name} -f --token 12345... --repo nodejs/node --context ci/build "build failure!" "https://ci.server/build/12346"
 `)
   }
 
