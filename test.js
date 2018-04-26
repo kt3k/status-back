@@ -2,6 +2,7 @@ const { execSync } = require('child_process')
 const { join } = require('path')
 const assert = require('assert')
 const pkg = require('./package')
+const util = require('./util')
 
 const bin = join(__dirname, 'bin', 'status-back.js')
 const defaultOpts = {}
@@ -84,7 +85,7 @@ describe('cli(status-back)', function () {
 
           context('when sha1 is set correctly', () => {
             it('requests to the github commit status api', () => {
-              exec(`${bin} -s -t cafebabe -r nodejs/node -c ci/test --sha1 1234567890123456789012345678901234567890`)
+              exec(`${bin} -s -t cafebabe -r nodejs/node -c ci/test --sha1 1234567890123456789012345678901234567890 description http://example.com/result`)
             })
 
             it('requests and fails if the github API is wrong', () => {
@@ -98,4 +99,13 @@ describe('cli(status-back)', function () {
 })
 
 describe('util', () => {
+  describe('assert', () => {
+    it('does nothing if the condition is ok', () => {
+      util.assert(true, 'ok')
+    })
+
+    it('throws if the condition is not ok', () => {
+      assert.throws(() => util.assert(false, 'ng'))
+    })
+  })
 })
