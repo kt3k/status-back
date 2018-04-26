@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "description": "Send the status back to the github from CI environment",
   "main": "index.js",
-  "bin": "./status-back.js",
+  "bin": {
+    "status": "./bin/status-back.js",
+    "status-back": "./bin/status-back.js"
+  },
   "scripts": {
     "test": "run-p -r mocha agreed",
     "mocha": "cross-env GITHUB_API=http://localhost:3010 mocha test.js",
