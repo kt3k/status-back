@@ -38,6 +38,70 @@ This installs `status-back` to your system.
     status-back -f -t 12345... -r nodejs/node -c ci/build "build failure!" https://ci.server/build/12346 --github-api https://github.my-company/api/v3
 ```
 
+# Examples & recipes
+
+## Usage with Jenkins declarative pipeline
+
+In CI settings, we recommend to use enviroment variables for setting common parameters.
+
+```groovy
+pipeline {
+  envrionment {
+    GITHUB_TOKEN = credentials 'github-token'
+    GITHUB_API = 'https://mycompany.github/api/v3'
+    STATUS_REPO = 'myorg/myrepo'
+  }
+
+  stages {
+    stage('install') {
+      steps {
+        sh 'yarn'
+      }
+    }
+
+    stage('lint') {
+      environment {
+        STATUS_CONTEXT = 'jenkins/lint'
+      }
+
+      steps {
+        sh 'npx status-back -p "Linting..." $BUILD_URL'
+        sh 'npm run lint'
+      }
+
+      post {
+        success {
+          sh 'npx status-back -s "Lint success!" $BUILD_URL'
+        }
+        failure {
+          sh 'npx status-back -f "Lint failed!" $BUILD_URL'
+        }
+      }
+    }
+
+    stage('test') {
+      environment {
+        STATUS_CONTEXT = 'jenkins/test'
+      }
+
+      steps {
+        sh 'npx status-back -p "Testing..." $BUILD_URL'
+        sh 'npm test'
+      }
+
+      post {
+        success {
+          sh 'npx status-back -s "Test success!" $BUILD_URL'
+        }
+        failure {
+          sh 'npx status-back -f "Test failed!" $BUILD_URL'
+        }
+      }
+    }
+  }
+}
+```
+
 # License
 
 MIT
