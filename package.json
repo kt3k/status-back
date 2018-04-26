@@ -8,7 +8,7 @@
     "test": "run-p -r mocha agreed",
     "mocha": "cross-env GITHUB_API=http://localhost:3010 mocha test.js",
     "cov": "nyc npm test",
-    "i": "./bin/status-back.js",
+    "codecov": "npm run cov && codecov",
     "agreed": "agreed-server --port 3010 --path agreed/",
     "lint": "standard"
   },
