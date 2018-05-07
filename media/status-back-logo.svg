@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="350px" height="350px" viewBox="0 0 350 350" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>status-back-logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="17.433731%" y1="10.8444165%" x2="86.3793576%" y2="84.2048847%" id="linearGradient-1">
+            <stop stop-color="#299DDE" offset="0%"></stop>
+            <stop stop-color="#4BD39B" stop-opacity="0.896314538" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="status-back" transform="translate(-573.000000, -97.000000)">
+            <g id="status-back-logo" transform="translate(573.000000, 97.000000)">
+                <circle id="Oval" fill="url(#linearGradient-1)" cx="175" cy="175" r="175"></circle>
+                <path d="M107.863665,160.440447 C117.275774,151.3799 143.408587,128.827166 150.790339,124.701096 C158.172092,120.575025 164.002337,124.701096 164.002337,134.446307 C164.002337,144.191518 164.002337,208.3174 164.002337,217.549822 C164.002337,226.782244 158.037493,230.506853 150.790339,224.124041 C142.832804,217.115571 115.117571,194.65408 104.644915,183.706072 C94.1722584,172.758065 98.4515553,169.500994 107.863665,160.440447 Z" id="Triangle" fill="#FFFFFF"></path>
+                <path d="M180.464696,164.475586 C198.267763,151.166669 221.369976,144.008141 249.771337,143 L249.771337,205 C227.987482,200.483073 209.689956,199.772135 194.878758,202.867188 C172.661962,207.509766 167.752782,215.708984 158.89243,217.488281 C150.032079,219.267578 155.918798,182.825195 180.464696,164.475586 Z" id="Triangle" fill="#FFFFFF" transform="translate(202.385668, 180.275566) scale(-1, 1) translate(-202.385668, -180.275566) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

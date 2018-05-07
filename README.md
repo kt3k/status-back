@@ -1,3 +1,5 @@
+<img width="130" src="https://ghe.misosiru.io/pages/hinosawa/status-back/media/status-back-logo.svg" />
+
 # status-back v0.1.0
 
 > :arrow_left::large_blue_circle: Send the status back to the github from CI environment
