@@ -26,7 +26,7 @@
     "commit-status"
   ],
   "author": "Recruit Lifestyle Co., Ltd.",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/recruit-lifestyle/status-back/issues"
   },

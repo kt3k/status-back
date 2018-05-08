@@ -106,7 +106,7 @@ pipeline {
 
 # License
 
-MIT
+Apache 2.0
 
 **Note**: This library is inspired by [commit-status][] by [dtinth][], but is a bit more focused on usages in Github Enterprise environment, rather than github.com.
 
