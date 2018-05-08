@@ -8,7 +8,11 @@ const bin = join(__dirname, 'bin', 'status-back.js')
 const defaultOpts = {}
 
 /**
+ * Executes the given command with the options.
  *
+ * @param {string} cmd The command to excute
+ * @param {Object} opts The options to pass to execSync
+ * @return {string} The result of command
  */
 const exec = (cmd, opts) => execSync(cmd, Object.assign({}, defaultOpts, opts)).toString()
 
