@@ -2,6 +2,9 @@
 
 # status-back v1.0.0
 
+[![CircleCI](https://circleci.com/gh/recruit-lifestyle/status-back.svg?style=svg)](https://circleci.com/gh/recruit-lifestyle/status-back)
+[![codecov](https://codecov.io/gh/recruit-lifestyle/status-back/branch/master/graph/badge.svg)](https://codecov.io/gh/recruit-lifestyle/status-back)
+
 > :arrow_left::large_blue_circle: Send the status back to the github from CI environment
 
 # :cd: Install
