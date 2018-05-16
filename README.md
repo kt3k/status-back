@@ -51,7 +51,7 @@ pipeline {
   envrionment {
     GITHUB_TOKEN = credentials 'github-token'
     GITHUB_API = 'https://mycompany.github/api/v3'
-    STATUS_REPO = 'myorg/myrepo'
+    GITHUB_REPO = 'myorg/myrepo'
   }
 
   stages {
