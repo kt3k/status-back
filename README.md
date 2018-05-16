@@ -1,6 +1,6 @@
 <img width="130" src="http://techblog.recruit-lifestyle.co.jp/status-back/media/status-back-logo.svg" />
 
-# status-back v1.0.0
+# status-back v1.0.1
 
 [![CircleCI](https://circleci.com/gh/recruit-lifestyle/status-back.svg?style=svg)](https://circleci.com/gh/recruit-lifestyle/status-back)
 [![codecov](https://codecov.io/gh/recruit-lifestyle/status-back/branch/master/graph/badge.svg)](https://codecov.io/gh/recruit-lifestyle/status-back)
