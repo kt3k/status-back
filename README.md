@@ -1,6 +1,6 @@
 <img width="130" src="http://techblog.recruit-lifestyle.co.jp/status-back/media/status-back-logo.svg" />
 
-# status-back v1.0.0
+# status-back v1.0.1
 
 > :arrow_left::large_blue_circle: Send the status back to the github from CI environment
 

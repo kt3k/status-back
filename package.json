@@ -1,6 +1,6 @@
 {
   "name": "status-back",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Send the status back to the github from CI environment",
   "main": "index.js",
   "bin": {
