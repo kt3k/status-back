@@ -7,6 +7,7 @@ minimisted(main, {
   boolean: [
     'help',
     'version',
+    'verbose',
     'pending',
     'success',
     'failure',
@@ -21,7 +22,7 @@ minimisted(main, {
   ],
   alias: {
     h: 'help',
-    v: 'version',
+    v: 'verbose',
     p: 'pending',
     s: 'success',
     f: 'failure',
