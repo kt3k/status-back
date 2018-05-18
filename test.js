@@ -19,9 +19,9 @@ const exec = (cmd, opts) => execSync(cmd, Object.assign({}, defaultOpts, opts)).
 describe('cli(status-back)', function () {
   this.timeout(8000)
 
-  context('-v, --version options', () => {
+  context('--version options', () => {
     it('shows version number', () => {
-      const result = exec(`${bin} -v`)
+      const result = exec(`${bin} --version`)
 
       assert(result.includes(pkg.version))
     })
@@ -90,6 +90,18 @@ describe('cli(status-back)', function () {
           context('when sha1 is set correctly', () => {
             it('requests to the github commit status api', () => {
               exec(`${bin} -s -t cafebabe -r nodejs/node -c ci/test --sha1 1234567890123456789012345678901234567890 description http://example.com/result`)
+            })
+
+            it('when verbose mode is set', () => {
+              const result = exec(`${bin} -v -s -t cafebabe -r nodejs/node -c ci/test --sha1 1234567890123456789012345678901234567890 description http://example.com/result`)
+
+              assert(result.includes('Run with verbose mode.'))
+            })
+
+            it('when verbose mode is not set', () => {
+              const result = exec(`${bin} -s -t cafebabe -r nodejs/node -c ci/test --sha1 1234567890123456789012345678901234567890 description http://example.com/result`)
+
+              assert(!result.includes('Run with verbose mode.'))
             })
 
             it('requests and fails if the github API is wrong', () => {

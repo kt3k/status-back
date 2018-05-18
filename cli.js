@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const chalk = require('chalk')
+const padEnd = require('pad-end')
 const { select } = require('action-selector')
 const pkg = require('./package')
 const { post } = require('./')
@@ -28,6 +29,8 @@ class CLI {
   Usage: ${chalk.cyan(pkg.name)} [options] [<description>, [<url>]]
 
   Options:
+    --version - - - - - - - - - Output the version.
+    -v, --verbose - - - - - - - Output verbose message on internal operations.
     -p, --pending - - - - - - - Set the commit status pending.
     -s, --success - - - - - - - Set the commit status success.
     -f, --failure - - - - - - - Set the commit status failure.
@@ -59,6 +62,8 @@ class CLI {
     const success = argv.success || false
     const failure = argv.failure || false
     const error = argv.error || false
+    const verbose = argv.verbose || false
+    const verbosePrefix = chalk.gray('verbose')
 
     if (pending + success + failure + error === 0) {
       console.log(`${chalk.red('Error:')} One of ${chalk.cyan('--pending')}, ${chalk.cyan('--success')}, ${chalk.cyan('--failure')} and ${chalk.cyan('--error')} option is required.`)
@@ -125,6 +130,24 @@ class CLI {
     const rootURL = argv['github-api'] || process.env.GITHUB_API
     const description = argv._[0] || ''
     const url = argv._[1] || ''
+
+    if (verbose) {
+      console.log(`Run with ${verbosePrefix} mode.`)
+
+      let status = pending && 'pending';
+      status = status || success && 'success';
+      status = status || failure && 'failure';
+      status = status || error && 'error';
+
+      console.log(`${verbosePrefix} ${padEnd('token:', 15)} ${chalk.white(token.slice(0,5) + '...')}`)
+      console.log(`${verbosePrefix} ${padEnd('sha1:', 15)} ${chalk.white(sha1)}`)
+      console.log(`${verbosePrefix} ${padEnd('status:', 15)} ${chalk.white(status)}`)
+      console.log(`${verbosePrefix} ${padEnd('repo:', 15)} ${chalk.white(repo)}`)
+      console.log(`${verbosePrefix} ${padEnd('context:', 15)} ${chalk.white(context)}`)
+      console.log(`${verbosePrefix} ${padEnd('description:', 15)} ${chalk.white(description)}`)
+      console.log(`${verbosePrefix} ${padEnd('url:', 15)} ${chalk.white(url)}`)
+      console.log(`${verbosePrefix} ${padEnd('github-api:', 15)} ${chalk.white(rootURL)}`)
+    }
 
     post({
       token,
