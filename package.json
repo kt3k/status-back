@@ -35,7 +35,8 @@
     "action-selector": "^1.0.1",
     "chalk": "^2.4.0",
     "minimisted": "^2.0.0",
-    "octokat": "^0.10.0"
+    "octokat": "^0.10.0",
+    "pad-end": "^1.0.2"
   },
   "devDependencies": {
     "agreed": "^3.1.0",

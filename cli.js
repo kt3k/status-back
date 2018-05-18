@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const chalk = require('chalk')
-const padEnd = require('lodash/padEnd')
+const padEnd = require('pad-end')
 const { select } = require('action-selector')
 const pkg = require('./package')
 const { post } = require('./')
