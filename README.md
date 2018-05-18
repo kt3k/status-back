@@ -21,6 +21,8 @@ This installs `status-back` to your system.
   Usage: status-back [options] [<description>, [<url>]]
 
   Options:
+    --version - - - - - - - - - Output the version.
+    -v, --verbose - - - - - - - Output verbose message on internal operations.
     -p, --pending - - - - - - - Set the commit status pending.
     -s, --success - - - - - - - Set the commit status success.
     -f, --failure - - - - - - - Set the commit status failure.
