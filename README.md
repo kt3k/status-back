@@ -3,7 +3,7 @@
 # status-back v1.1.0
 
 [![CircleCI](https://circleci.com/gh/recruit-lifestyle/status-back.svg?style=svg)](https://circleci.com/gh/recruit-lifestyle/status-back)
-[![codecov](https://codecov.io/gh/recruit-lifestyle/status-back/branch/master/graph/badge.svg)](https://codecov.io/gh/recruit-lifestyle/status-back)
+[![codecov](https://codecov.io/gh/recruit-lifestyle/status-back/branch/master/graph/badge.svg)](https://codecov.io/gh/recruit-lifestyle/status-back) [![Greenkeeper badge](https://badges.greenkeeper.io/recruit-lifestyle/status-back.svg)](https://greenkeeper.io/)
 
 > :arrow_left::large_blue_circle: Send the status back to the github from CI environment
 
