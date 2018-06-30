@@ -49,11 +49,11 @@ This installs `status-back` to your system.
 
 ## Usage with Jenkins declarative pipeline
 
-In CI settings, we recommend to use enviroment variables for setting common parameters.
+In CI settings, we recommend to use environment variables for setting common parameters.
 
 ```groovy
 pipeline {
-  envrionment {
+  environment {
     GITHUB_TOKEN = credentials 'github-token'
     GITHUB_API = 'https://mycompany.github/api/v3'
     GITHUB_REPO = 'myorg/myrepo'
