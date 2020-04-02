@@ -33,7 +33,7 @@
   "homepage": "https://github.com/recruit-lifestyle/status-back#readme",
   "dependencies": {
     "action-selector": "^1.0.1",
-    "chalk": "^3.0.0",
+    "chalk": "^4.0.0",
     "minimisted": "^2.0.0",
     "octokat": "^0.10.0",
     "pad-end": "^1.0.2"
