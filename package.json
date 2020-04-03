@@ -25,8 +25,8 @@
     "jenkins",
     "commit-status"
   ],
-  "author": "Recruit Lifestyle Co., Ltd.",
-  "license": "Apache-2.0",
+  "author": "Yoshiya Hinosawa",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/recruit-lifestyle/status-back/issues"
   },
