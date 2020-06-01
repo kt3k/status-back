@@ -1,9 +1,9 @@
-<img width="130" src="http://techblog.recruit-lifestyle.co.jp/status-back/media/status-back-logo.svg" />
+<img width="130" src="https://kt3k.github.io/status-back/media/status-back-logo.svg" />
 
 # status-back v1.1.1
 
-[![CircleCI](https://circleci.com/gh/recruit-lifestyle/status-back.svg?style=svg)](https://circleci.com/gh/recruit-lifestyle/status-back)
-[![codecov](https://codecov.io/gh/recruit-lifestyle/status-back/branch/master/graph/badge.svg)](https://codecov.io/gh/recruit-lifestyle/status-back) [![Greenkeeper badge](https://badges.greenkeeper.io/recruit-lifestyle/status-back.svg)](https://greenkeeper.io/)
+[![CircleCI](https://circleci.com/gh/kt3k/status-back.svg?style=svg)](https://circleci.com/gh/recruit-lifestyle/status-back)
+[![codecov](https://codecov.io/gh/kt3k/status-back/branch/master/graph/badge.svg)](https://codecov.io/gh/recruit-lifestyle/status-back)
 
 > :arrow_left::large_blue_circle: Send the status back to the github from CI environment
 
